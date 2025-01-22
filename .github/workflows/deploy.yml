@@ -1,0 +1,47 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main # Adjust if your main branch has a different name
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v4 # Update to latest version
+
+      # Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm" # Enable npm caching for faster builds
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci # Use npm ci for more reliable installs in CI environments
+
+      # Update browserslist database
+      - name: Update Browserslist
+        run: npx browserslist@latest --update-db
+
+      # Lint code (optional but recommended)
+      - name: Lint Code
+        run: npm run lint # Assumes you have a lint script in package.json
+
+      # Build the project
+      - name: Build project
+        run: npm run build
+        env:
+          CI: false # Prevent warnings from stopping the build
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4 # Update to latest version
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
