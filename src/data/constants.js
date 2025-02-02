@@ -7,7 +7,7 @@ export const Bio = {
     "Experienced Java Developer with 6+ years of expertise in building scalable and high-performance applications using Java (8, 11, 17), Spring Boot, and Microservices architecture. Proficient in designing robust systems with Hibernate, Redis, and AWS services. Skilled in implementing CI/CD pipelines using tools like JFrog and delivering innovative, efficient solutions for Banking and E-commerce domains. Adept at integrating complex architectures and optimizing application performance to drive business success.",
   github: "https://github.com/Nishad1999",
   resume:
-    "https://drive.google.com/file/d/1fDK3S4SMI1t-AilvU0wLy99A9oUbSTMG/view?usp=sharing",
+    "https://drive.google.com/file/d/1UHeFMEMb1Tf_bm147N_iW6WmGHiWLIKg/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/rohit-nishad-9a5301294/",
   insta:
     "https://instagram.com/__rohit_nishad?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",
