@@ -1,6 +1,6 @@
 {
-  "homepage": "https://Navneetoo7.github.io/portfolio",
-  "name": "navneet-chaurasiya-test",
+  "homepage": "https://nishad1999.github.io/portfolio-main",
+  "name": "rohit-nishad-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,7 +42,7 @@
     ],
     "rules": {
       "no-unused-vars": "warn",
-    "jsx-a11y/anchor-is-valid": "warn"
+      "jsx-a11y/anchor-is-valid": "warn"
     }
   },
   "browserslist": {
