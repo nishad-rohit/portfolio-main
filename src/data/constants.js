@@ -8,7 +8,7 @@ export const Bio = {
   github: "https://github.com/nishad-rohit",
   resume:
     "https://drive.google.com/file/d/1wG9Paqr3awF7ywUeZgHZsxpU4Jg7lhW5/view?usp=drive_link",  // updated resume
-  linkedin: "https://www.linkedin.com/in/rohit-nishad/",
+  linkedin: "https://www.linkedin.com/in/nishad-rohit/",
   insta:
     "https://instagram.com/__rohit_nishad?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",
 };
