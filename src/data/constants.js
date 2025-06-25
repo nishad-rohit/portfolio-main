@@ -5,7 +5,7 @@ export const Bio = {
   roles: ["Programmer", "Java Developer", "Senior Software Engineer", "Team Leader"],
   description:
     "Experienced Java Developer with 6+ years of expertise in building scalable and high-performance applications using Java (8, 11, 17), Spring Boot, and Microservices architecture. Proficient in designing robust systems with Hibernate, Redis, and AWS services. Skilled in implementing CI/CD pipelines using tools like JFrog and delivering innovative, efficient solutions for Banking and E-commerce domains. Adept at integrating complex architectures and optimizing application performance to drive business success.",
-  github: "https://github.com/Nishad1999",
+  github: "https://github.com/nishad-rohit",
   resume:
     "https://drive.google.com/file/d/1wG9Paqr3awF7ywUeZgHZsxpU4Jg7lhW5/view?usp=drive_link",  // updated resume
   linkedin: "https://www.linkedin.com/in/rohit-nishad-9a5301294/",
