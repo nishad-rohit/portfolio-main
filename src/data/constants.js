@@ -4,13 +4,12 @@ export const Bio = {
   name: "Rohit Nishad",
   roles: ["Programmer", "Java Developer", "Senior Software Engineer", "Team Leader"],
   description:
-    "Experienced Java Developer with 6+ years of expertise in building scalable and high-performance applications using Java (8, 11, 17), Spring Boot, and Microservices architecture. Proficient in designing robust systems with Hibernate, Redis, and AWS services. Skilled in implementing CI/CD pipelines using tools like JFrog and delivering innovative, efficient solutions for Banking and E-commerce domains. Adept at integrating complex architectures and optimizing application performance to drive business success.",
+    "Experienced Java Developer with 7 years of expertise in building scalable and high-performance applications using Java (8, 11, 17, 21), Spring Boot, and Microservices architecture. Proficient in designing robust systems with Hibernate, Redis, and AWS services. Skilled in implementing CI/CD pipelines using tools like JFrog and delivering innovative, efficient solutions for Banking and E-commerce domains. Adept at integrating complex architectures and optimizing application performance to drive business success.",
   github: "https://github.com/nishad-rohit",
   resume:
     "https://drive.google.com/file/d/1wG9Paqr3awF7ywUeZgHZsxpU4Jg7lhW5/view?usp=drive_link",  // updated resume
   linkedin: "https://www.linkedin.com/in/nishad-rohit/",
-  insta:
-    "https://instagram.com/__rohit_nishad?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",
+  insta:"https://instagram.com/rohit_niishad",
 };
 
 export const skills = [
@@ -37,7 +36,12 @@ export const skills = [
       {
         name: "Go",
         image: "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png",
-      }
+      },
+      {
+  name: "Python",
+  image: "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png",
+}
+
     ],
   },
   {
@@ -73,6 +77,10 @@ export const skills = [
         image:
           "https://dyltqmyl993wv.cloudfront.net/assets/stacks/rmq-messaging-topology-operator/img/rmq-messaging-topology-operator-stack-220x234.png",
       },
+     {
+      name: "Gin",
+      image: "https://raw.githubusercontent.com/gin-gonic/logo/master/color.png",
+    }
     ],
   },
   {
@@ -202,3 +210,4 @@ export const education = [
     degree: "Bachelor of Science",
   },
 ];
+
