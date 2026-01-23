@@ -101,7 +101,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2025 Rohit Nishad. All rights reserved.
+          &copy; 2026 Rohit Nishad. All rights reserved.
         </Copyright>
 
       </FooterWrapper>
