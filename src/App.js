@@ -6,10 +6,13 @@ import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
-// import Projects from "./components/Projects";
+import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import Contact from "./components/Contact";
+import ProjectDetails from "./components/ProjectDetails";
+import ScrollToTop from "./components/ScrollToTop";
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -32,29 +35,30 @@ const Wrapper = styled.div`
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
+
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  // const [openModal, setOpenModal] = useState({ state: false, project: null });
-  // console.log(openModal)
+  const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
-    <ThemeProvider theme={!darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router>
-        <Navbar />
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Body>
           <HeroSection />
           <Wrapper>
             <Skills />
             <Experience />
           </Wrapper>
-          {/* <Projects openModal={openModal} setOpenModal={setOpenModal} /> */}
+          <Projects openModal={openModal} setOpenModal={setOpenModal} />
           <Wrapper>
             <Education />
-            {/* <Contact /> */}
+            <Contact />
           </Wrapper>
           <Footer />
-          {/* {openModal.state &&
+          <ScrollToTop />
+          {openModal.state && (
             <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          } */}
+          )}
         </Body>
       </Router>
     </ThemeProvider>

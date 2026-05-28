@@ -7,71 +7,98 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 60px 1rem 80px;
 `;
 
 const Title = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: ${({ theme }) => theme.text_primary || "#333"};
+  font-size: 42px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+  color: ${({ theme }) => theme.text_primary};
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 const Description = styled.p`
-  font-size: 1rem;
+  font-size: 18px;
   text-align: center;
   max-width: 600px;
-  color: ${({ theme }) => theme.text_secondary || "#666"};
+  margin-bottom: 36px;
+  color: ${({ theme }) => theme.text_secondary};
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.card || "#fff"};
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: ${({ theme }) => theme.card};
+  border: 0.1px solid #854ce6;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   width: 100%;
   max-width: 600px;
   gap: 1rem;
+  @media (max-width: 600px) {
+    padding: 1.5rem 1.2rem;
+  }
 `;
 
 const Input = styled.input`
-  border: 1px solid ${({ theme }) => theme.input_border || "#ccc"};
+  background: ${({ theme }) => theme.bg};
+  border: 1px solid ${({ theme }) => theme.text_secondary + "55"};
   border-radius: 8px;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
+  color: ${({ theme }) => theme.text_primary};
   outline: none;
+  transition: border-color 0.2s ease;
+  &::placeholder {
+    color: ${({ theme }) => theme.text_secondary};
+  }
   &:focus {
-    border-color: ${({ theme }) => theme.primary || "#6c63ff"};
-    box-shadow: 0 0 5px ${({ theme }) => theme.primary || "#6c63ff"};
+    border-color: ${({ theme }) => theme.primary};
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.primary + "33"};
   }
 `;
 
 const TextArea = styled.textarea`
-  border: 1px solid ${({ theme }) => theme.input_border || "#ccc"};
+  background: ${({ theme }) => theme.bg};
+  border: 1px solid ${({ theme }) => theme.text_secondary + "55"};
   border-radius: 8px;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
+  color: ${({ theme }) => theme.text_primary};
   outline: none;
   resize: none;
+  transition: border-color 0.2s ease;
+  &::placeholder {
+    color: ${({ theme }) => theme.text_secondary};
+  }
   &:focus {
-    border-color: ${({ theme }) => theme.primary || "#6c63ff"};
-    box-shadow: 0 0 5px ${({ theme }) => theme.primary || "#6c63ff"};
+    border-color: ${({ theme }) => theme.primary};
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.primary + "33"};
   }
 `;
 
 const Button = styled.button`
-  background: linear-gradient(135deg, #6c63ff, #4e4ce6);
+  background: hsla(271, 100%, 50%, 1);
+  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
   color: white;
   border: none;
-  padding: 0.75rem;
-  border-radius: 8px;
+  padding: 0.85rem;
+  border-radius: 10px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   &:hover {
-    background: linear-gradient(135deg, #4e4ce6, #6c63ff);
+    transform: scale(1.02);
+    filter: brightness(1.1);
   }
 `;
 
@@ -92,23 +119,25 @@ const Contact = () => {
       .sendForm("service_bsvpsi8", "template_nv7k7mj", formRef.current, "371te-rhhiFWxlVHq")
       .then(
         () => {
-          setSnackbar({ open: true, message: "Email sent successfully!", severity: "success" });
+          setSnackbar({ open: true, message: "Message sent successfully!", severity: "success" });
           formRef.current.reset();
         },
-        () => setSnackbar({ open: true, message: "Failed to send email.", severity: "error" })
+        () => setSnackbar({ open: true, message: "Failed to send message. Try again.", severity: "error" })
       );
   };
 
   return (
-    <Container>
+    <Container id="contact">
       <Title>Contact Me</Title>
-      <Description>Feel free to reach out for any inquiries or collaborations!</Description>
+      <Description>
+        Have a project in mind or want to connect? Feel free to reach out — I'll get back to you soon!
+      </Description>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <Input type="email" name="from_email" placeholder="Your Email" required />
         <Input type="text" name="from_name" placeholder="Your Name" required />
         <Input type="text" name="subject" placeholder="Subject" required />
-        <TextArea name="message" rows="4" placeholder="Message" required />
-        <Button type="submit">Send</Button>
+        <TextArea name="message" rows="5" placeholder="Your Message" required />
+        <Button type="submit">Send Message</Button>
       </Form>
       <Snackbar
         open={snackbar.open}

@@ -164,6 +164,35 @@ export const SubTitle = styled.div`
   }
 `;
 
+export const SocialIcons = styled.div`
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  @media (max-width: 960px) {
+    justify-content: center;
+  }
+`;
+
+export const SocialIcon = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary};
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px ${({ theme }) => theme.primary + "55"};
+  }
+`;
+
 export const ResumeButton = styled.a`
   -webkit-appearance: button;
   -moz-appearance: button;
