@@ -146,7 +146,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://x.com/Botim_Official/photo",
+    // img: "https://x.com/Botim_Official/photo",
     role: "Software Engineer",
     company: "Botim",
     date: "January 2026 - Present",
@@ -155,7 +155,7 @@ export const experiences = [
   },
   {
     id: 1,
-    img: "https://media.licdn.com/dms/image/v2/D4D0BAQGZW5wJindNgw/company-logo_200_200/company-logo_200_200/0/1696677600640/voizzitofficial_logo?e=1741219200&v=beta&t=A61msFVJo1sXYh3tIy89CUi5dBtLZmOn9FbdBqtdEeg",
+    // img: "https://media.licdn.com/dms/image/v2/D4D0BAQGZW5wJindNgw/company-logo_200_200/company-logo_200_200/0/1696677600640/voizzitofficial_logo?e=1741219200&v=beta&t=A61msFVJo1sXYh3tIy89CUi5dBtLZmOn9FbdBqtdEeg",
     role: "Senior Java Developer",
     company: "Voizzit",
     date: "August 2023 - Present",
@@ -197,9 +197,10 @@ export const projects = [
     title: "E-Commerce Platform",
     date: "Aug 2023 - Present",
     description: "Architected a scalable e-commerce platform using microservices with service discovery, fault tolerance, and API gateway, secured with JWT authentication and Keycloak for identity and access management.",
-    image: "https://opengraph.githubassets.com/1/nishad-rohit/nishad-rohit",
+    image: "https://opengraph.githubassets.com/1/nishad-rohit/kingsOrder",
     tags: ["Spring Boot", "Spring Cloud", "Kafka", "Microservices", "Docker", "PostgreSQL", "AWS", "Redis", "JWT", "Keycloak"],
     category: "web app",
+    github: "https://github.com/nishad-rohit/kingsOrder",
   },
   {
     id: 1,
